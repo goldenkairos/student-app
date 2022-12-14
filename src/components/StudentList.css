@@ -1,0 +1,6 @@
+.student-list__header {color: blue;
+font-size: oblique;}
+
+.student-list {
+    list-style-type: square;
+}
