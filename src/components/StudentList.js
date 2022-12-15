@@ -2,15 +2,45 @@ import React from 'react';
 import './StudentList.css';
 import Student from './Student';
 
+const studentData = [
+  {
+      nameData: 'Ada',
+      emailData: 'ada@dev.org'
+  },
+  {
+      nameData: 'Soo-ah',
+      emailData: 'sooah@dev.org'
+  },
+  {
+      nameData: 'Chrissy',
+      emailData: 'chrissy@dev.org'
+  },
+  {
+    nameData: 'Minh',
+    emailData: 'minh@dev.org'
+},
+]
+
+
 const StudentList = () => {
   const componentClass ='student-list'
-  const headerClass ='student-list__header'
+
+  //(student) can be anything, here it's individual student
+  const studentComponents = studentData.map((student) =>{
+    return (
+      <li key={student.emailData}>
+        <Student 
+        name={ student.nameData } 
+        email={student.emailData} />
+      </li>
+    );
+  });
+
   return (
     <section>
-      <h2 className={headerClass}>Student List</h2>
+      <h2>Student List</h2>
       <ul className={componentClass}>
-        <li><Student name="Ada Lovelace" email="ada@dev.org" /></li>
-        <li><Student name="Becca" email="becca@dev.org"/></li>
+        {studentComponents }
 
       </ul>
     </section>
