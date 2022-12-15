@@ -24,11 +24,11 @@ import Student from './Student';
 // ]
 
 
-const StudentList = (props) => {
+const StudentList = ( { studentData }) => {
   const componentClass ='student-list'
 
   //(student) can be anything, here it's individual student
-  const studentComponents = props.studentData.map((student) =>{
+  const studentComponents = studentData.map((student) =>{
     return (
       <li key={student.emailData}>
         <Student 
