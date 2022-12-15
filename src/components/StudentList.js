@@ -2,31 +2,33 @@ import React from 'react';
 import './StudentList.css';
 import Student from './Student';
 
-const studentData = [
-  {
-      nameData: 'Ada',
-      emailData: 'ada@dev.org'
-  },
-  {
-      nameData: 'Soo-ah',
-      emailData: 'sooah@dev.org'
-  },
-  {
-      nameData: 'Chrissy',
-      emailData: 'chrissy@dev.org'
-  },
-  {
-    nameData: 'Minh',
-    emailData: 'minh@dev.org'
-},
-]
+
+///moving studentData to App and pass to studentList as prop
+// const studentData = [
+//   {
+//       nameData: 'Ada',
+//       emailData: 'ada@dev.org'
+//   },
+//   {
+//       nameData: 'Soo-ah',
+//       emailData: 'sooah@dev.org'
+//   },
+//   {
+//       nameData: 'Chrissy',
+//       emailData: 'chrissy@dev.org'
+//   },
+//   {
+//     nameData: 'Minh',
+//     emailData: 'minh@dev.org'
+// },
+// ]
 
 
-const StudentList = () => {
+const StudentList = (props) => {
   const componentClass ='student-list'
 
   //(student) can be anything, here it's individual student
-  const studentComponents = studentData.map((student) =>{
+  const studentComponents = props.studentData.map((student) =>{
     return (
       <li key={student.emailData}>
         <Student 
