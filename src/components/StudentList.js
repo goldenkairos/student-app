@@ -9,10 +9,9 @@ const StudentList = () => {
     <section>
       <h2 className={headerClass}>Student List</h2>
       <ul className={componentClass}>
-        <li><Student /></li>
-        <li><Student /></li>
-        <li><Student /></li>
-        <li><Student /></li>
+        <li><Student name="Ada Lovelace" email="ada@dev.org" /></li>
+        <li><Student name="Becca" email="becca@dev.org"/></li>
+
       </ul>
     </section>
   );
