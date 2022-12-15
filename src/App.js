@@ -32,11 +32,11 @@ function App() {
         present:true
   }
   ]);
-  const tooglePresent = (id) => {
+  const updateStudent = (studentToUpdate) => {
     const students = studentData.map((student) => {
-      if (student.id === id) {
-        student.present = !student.present;
-        console.log("current status is",student.present)
+      if (student.id === studentToUpdate.id) {
+        return studentToUpdate;
+        
       }
       return student;
     });
@@ -55,7 +55,7 @@ function App() {
       <main>
       <StudentList 
         studentData={studentData}
-        onUpdateStudent={tooglePresent}
+        onUpdateStudent={updateStudent}
       />
       </main>
       <Post />

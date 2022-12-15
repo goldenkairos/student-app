@@ -13,7 +13,12 @@ const Student = ({name,email, id, isPresent, onUpdateStudent}) => {
   } else {console.log(`${name} is not present`)};
 
   const updateAttendance = () => {
-    onUpdateStudent(id)
+    onUpdateStudent({
+      id,
+      emailData:email,
+      nameData:name,
+      present:!isPresent});
+
     console.log(`Updating Attendance for ${name}`)
   
   }
