@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+// import { useState } from 'react';
 import './Student.css';
 
-const Student = ({name,email}) => {
+const Student = ({name,email, id, isPresent, onUpdateStudent}) => {
   // console.log(name,email)  //these from StudentList.js
 
-  const [ isPresent, setIsPresent] = useState(false);
+  // const [ isPresent, setIsPresent] = useState(false);
 
   if (isPresent){
     console.log(`${name} is present`);
   } else {console.log(`${name} is not present`)};
 
   const updateAttendance = () => {
+    onUpdateStudent(id)
     console.log(`Updating Attendance for ${name}`)
-    setIsPresent(!isPresent);
+  
   }
 
   const nameColor = isPresent ? 'green' : 'red';
@@ -35,6 +36,9 @@ const Student = ({name,email}) => {
 Student.propTypes ={
   name:PropTypes.string.isRequired,
   email:PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  isPresent: PropTypes.bool.isRequired,
+  onUpdateStudent: PropTypes.func.isRequired
 }
 
 export default Student;
