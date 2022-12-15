@@ -1,39 +1,39 @@
-
-import './App.css';
-import StudentList from './components/StudentList';
-import ClassInfo from './components/ClassInfo';
+import "./App.css";
+import StudentList from "./components/StudentList";
+import ClassInfo from "./components/ClassInfo";
 
 const studentData = [
   {
-      nameData: 'Ada',
-      emailData: 'ada@dev.org'
+    nameData: "Ada",
+    emailData: "ada@dev.org",
   },
   {
-      nameData: 'Soo-ah',
-      emailData: 'sooah@dev.org'
+    nameData: "Soo-ah",
+    emailData: "sooah@dev.org",
   },
   {
-      nameData: 'Chrissy',
-      emailData: 'chrissy@dev.org'
+    nameData: "Chrissy",
+    emailData: "chrissy@dev.org",
   },
   {
-    nameData: 'Minh',
-    emailData: 'minh@dev.org'
-},
-]
-
+    nameData: "Minh",
+    emailData: "minh@dev.org",
+  },
+  {
+    nameData: "Charles",
+    emailData: "charles@incharge.com",
+  },
+];
 
 function App() {
-  const studentList = <StudentList />
+
   return (
     <div className="App">
-    <header className="App-header">
-      <h1>Ada's class</h1>
-      <ClassInfo />
-    </header>
-      <StudentList 
-        studentData={studentData}
-      />
+      <header className="App-header">
+        <h1>Ada's class</h1>
+        <ClassInfo />
+      </header>
+      <StudentList studentData={studentData} />
     </div>
   );
 }
