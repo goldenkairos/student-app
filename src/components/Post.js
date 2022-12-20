@@ -17,6 +17,7 @@ const Post = () => {
           <button onClick={ updateLikes }>🌷</button>
           
       </section>
+      
   );
 };
 

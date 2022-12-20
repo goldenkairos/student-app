@@ -3,6 +3,7 @@ import StudentList from './components/StudentList';
 import ClassInfo from './components/ClassInfo';
 import './App.css';
 import Post from './components/Post';
+import NewStudentForm from './components/NewStudentForm';
 
 
 function App() {
@@ -57,8 +58,11 @@ function App() {
         studentData={studentData}
         onUpdateStudent={updateStudent}
       />
+      
       </main>
       <Post />
+      
+      <NewStudentForm />
     </div>
   );
 }
